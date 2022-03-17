@@ -10,9 +10,7 @@ public class Task1 {
         int count = 1;
 
         int i = num;
-        while (0 != (i /= 10)) {
-            count++;
-        }
+        while (0 != (i /= 10)) { count++; }
 
         String out;
 
@@ -39,12 +37,9 @@ class Task2 {
 
         if(a+b > c && a+c > b && b+c > a)
         {
-
             System.out.println("Треугольник со сторонами: " + a + " " + b + " " + c
                     + " Возможен");
-
         } else {
-
             System.out.println("Треугольник со сторонами: " + a + " " + b + " " + c
                     + " не возможен");
         }
@@ -66,20 +61,13 @@ class Task4 {
 
     public static void main(String[] args) {
 
-        int a = 10;
+        int a = 10;      int count = 0;
         int b = 3;
         int c = 5;
-        int count = 0;
 
-        if(a >= 0) {
-            count++;
-        }
-        if(b >= 0) {
-            count++;
-        }
-        if(c >= 0) {
-            count++;
-        }
+        if(a >= 0) { count++; }
+        if(b >= 0) { count++; }
+        if(c >= 0) { count++; }
 
         String numCheck = count > 1 || count == 0 ? " положительных" : " положительное";
         System.out.println("Среди трех чисел: " + a + " " + b + " " + c + " ---> " + count + numCheck);
@@ -90,27 +78,13 @@ class Task5 {
 
     public static void main(String[] args) {
 
-        int a = 10;
-        int b = -3;
-        int c = 5;
-        int count = 0;
-        int negCount = 0;
+        int a = 10;     int count      = 0;
+        int b = -3;     int negCount   = 0;
+        int c =  5;
 
-        if(a >= 0) {
-            count++;
-        } else {
-            negCount++;
-        }
-        if(b >= 0) {
-            count++;
-        } else {
-            negCount++;
-        }
-        if(c >= 0) {
-            count++;
-        } else {
-            negCount++;
-        }
+        if(a >= 0) { count++; } else { negCount++; }
+        if(b >= 0) { count++; } else { negCount++; }
+        if(c >= 0) { count++; } else { negCount++; }
 
         String numCheck = count > 1 || count == 0 ? " положительных" : " положительное";
         System.out.println("Среди трех чисел: " + a + " " + b + " " + c + " ---> " + count + numCheck);
@@ -123,12 +97,10 @@ class Task6 {
 
     public static void main(String[] args) {
 
-        int a = 10;
-        int b = 33;
+        int a = 100;
+        int b = 100;
 
-        int c = a > b ? a : a < b ? b : 0;
-
-        System.out.println(a + ":" + b + " ---> " + c);
+        System.out.println(a + ":" + b + " ---> " +  (a > b ? a : b) );
     }
 }
 
