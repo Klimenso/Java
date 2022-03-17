@@ -1,5 +1,7 @@
 package com.company.lesson1;
 
+import java.util.Scanner;
+
 public class Task1 {
 
     public static void main(String[] args) {
@@ -134,22 +136,36 @@ class Task7 {
 
     public static void main(String[] args) {
 
-        int a = 11;
-        String prog = "";
+        Scanner in = new Scanner(System.in);
 
-        if(a >= 10 &&  a < 21) {
-            prog = " программистов";
-        } else if ( a < 10 || a > 20){
-            if (a % 10 == 1 ) {
-                prog = " программист";
+        int progNum;
+        String prog_st = " программист";
+        String prog_sta = " программистa";
+        String prog_stov = " программистов";
+
+        do {
+
+            System.out.println("Enter some number:  ");
+            progNum = in.nextInt();
+
+            if ((progNum % 100 >= 5 && progNum % 100 <= 20) || progNum % 100 == 0) {
+                System.out.println(progNum + prog_stov);
+            } else
+            if (progNum % 100 == 1) {
+                System.out.println(progNum + prog_st);
+            } else
+            if (progNum % 100 >= 2 && progNum % 100 <= 4) {
+                System.out.println(progNum + prog_sta);
+            } else {
+                if (progNum % 10 == 1) {
+                    System.out.println(progNum + prog_st);
+                } else
+                if (progNum % 10 >= 2 && progNum % 10 <= 4) {
+                    System.out.println(progNum + prog_sta);
+                } else {
+                    System.out.println(progNum + prog_stov);
+                }
             }
-            if (a % 10 > 1 && a % 10 < 5) {
-                prog = " программистa";
-            }
-            if (a % 10 > 4 || a % 10 == 0) {
-                prog = " программистов";
-            }
-        }
-        System.out.println(a + prog);
+        } while(progNum >= 0);
     }
 }
