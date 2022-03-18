@@ -102,27 +102,38 @@ class Task8 {
 
         for(int i = 0; i < length; i++)
         {
-            for(int j = length - i - 1; j > 0; j--){
+            for(int j = length - i - 1; j > 0; j--) {
                 System.out.print(" ");
             }
-            for(int j = 0; j < i + 1; j++){
+            for(int j = 0; j < i + 1; j++) {
                System.out.print("*");
             }
             System.out.println();
         }
 
-        for(int i = 0; i < length; i++){
+        for(int i = 0; i < length; i++) {
             System.out.print("-");
         }
         System.out.println();
 
         for(int i = 0; i < length; i++)
         {
-            for(int j = 0; j < i; j++){
+            for(int j = 0; j < i; j++) {
                 System.out.print(" ");
             }
-            for(int j = length - i; j > 0; j--){
+            for(int j = length - i; j > 0; j--) {
                 System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+class MultiplicationTable {
+    public static void main(String[] args) {
+        for(int i = 1; i <= 10; i++){
+            for(int j = 1; j <= 10; j++) {
+                System.out.printf("%-3d ", i*j);
             }
             System.out.println();
         }
