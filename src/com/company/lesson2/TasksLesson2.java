@@ -57,3 +57,17 @@ class Task4 {
             System.out.println(a + " * " + b + " = " + comp);
     }
 }
+
+class Task5 {
+
+    private static double inchToCm = 2.54;
+
+    public static void main(String[] args) {
+        double inch = 1;
+        double   cm = inch *  inchToCm;
+        for(int i = 1; i <= 20; i++) {
+            System.out.println(i + " inch = " + cm + " cm");
+            cm = inchToCm * (i + 1);
+        }
+    }
+}
