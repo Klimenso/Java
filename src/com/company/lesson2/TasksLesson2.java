@@ -92,3 +92,39 @@ class Task7 {
         System.out.println(sum);
     }
 }
+
+class Task8 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter the length: ");
+        int length = in.nextInt();
+
+        for(int i = 0; i < length; i++)
+        {
+            for(int j = length - i - 1; j > 0; j--){
+                System.out.print(" ");
+            }
+            for(int j = 0; j < i + 1; j++){
+               System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for(int i = 0; i < length; i++){
+            System.out.print("-");
+        }
+        System.out.println();
+
+        for(int i = 0; i < length; i++)
+        {
+            for(int j = 0; j < i; j++){
+                System.out.print(" ");
+            }
+            for(int j = length - i; j > 0; j--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
