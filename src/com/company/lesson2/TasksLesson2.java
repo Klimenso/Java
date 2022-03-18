@@ -1,5 +1,7 @@
 package com.company.lesson2;
 
+import java.util.Scanner;
+
 public class TasksLesson2 {
 }
 
@@ -38,5 +40,20 @@ class Task3 {
         int sum = 1;
         while( i <= 256 ) { sum += i*=2; }
         System.out.println(sum);
+    }
+}
+
+class Task4 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+            System.out.println("Enter two numbers: ");
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int comp = 0;
+            for (int i = 0; i < a; i++) {
+                comp += b;
+            }
+            System.out.println(a + " * " + b + " = " + comp);
     }
 }
