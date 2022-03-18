@@ -3,10 +3,6 @@ package com.company.lesson2;
 public class TasksLesson2 {
 }
 
-/*1)Начав тренировки, спортсмен в первый день пробежал 10 км. Каждый
-        день он увеличивал дневную норму на 10% нормы предыдущего дня. Какой
-        суммарный путь пробежит спортсмен за 7 дней?*/
-
 class Task1 {
     public static void main(String[] args) {
 
@@ -20,5 +16,17 @@ class Task1 {
         }
 
         System.out.println("Kilometers in 7 days: " + sumKlmts);
+    }
+}
+
+class Task2 {
+    public static void main(String[] args) {
+
+        int numOfSells = 1;
+        for(int hours = 3; hours <=24; hours+=3)
+        {
+            numOfSells *= 2;
+            System.out.println("Через " + hours + " часа будет " + numOfSells + " клеток");
+        }
     }
 }
