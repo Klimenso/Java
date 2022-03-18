@@ -30,3 +30,13 @@ class Task2 {
         }
     }
 }
+
+class Task3 {
+    public static void main(String[] args) {
+
+        int i = 1;
+        int sum = 1;
+        while( i <= 256 ) { sum += i*=2; }
+        System.out.println(sum);
+    }
+}
