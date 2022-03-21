@@ -1,6 +1,5 @@
 package com.company.lesson34;
 
-import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
