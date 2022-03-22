@@ -33,6 +33,15 @@ public class AddTasks {
 
                 //addTask5
                 //addTask5(array);
+
+                //addTask6
+                //addTask6(array);
+
+                //addTask7
+                //addTask7(array, 11);
+
+                //addTask8
+                //addTask8(array);
         }
 
         public static void addTask1(int[] array) {
@@ -95,4 +104,50 @@ public class AddTasks {
                 }
         }
 
+        public static void addTask6(int[] array) {
+
+                boolean allDiff = true;
+                for(int j = 0; j < array.length - 1; j++) {
+                        for (int i = j + 1; i < array.length; i++) {
+                                if (array[i] == array[j]) {
+                                        allDiff = false;
+                                        break;
+                                }
+                        }
+                }
+
+                if(allDiff) {
+                        System.out.print("\nAll diff");
+                } else {
+                        System.out.print("\nThere are the same");
+                }
+        }
+
+        public static void addTask7(int[] array, int elem) {
+
+                int count = 0;
+                int e = elem;
+                for(int i = 0; i < array.length; i++) {
+                        if(array[i] == e) {
+                                count++;
+                        }
+                }
+
+                System.out.println("\nElem: " + e + " ---> " + count + " times");
+        }
+
+        public static void addTask8(int[] array) {
+
+                int max        = 0;
+                int second_max = 0;
+                for(int i = 1; i < array.length; i++) {
+                        if(array[i] > max) {
+                                second_max = max;
+                                max = array[i];
+                        } else if(array[i] > second_max && array[i] != max) {
+                                second_max = array[i];
+                        }
+                }
+                System.out.print("\nSecond max " + second_max);
+        }
 }
