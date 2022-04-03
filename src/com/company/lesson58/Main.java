@@ -1,20 +1,31 @@
 package com.company.lesson58;
 
+import com.company.lesson58.animals.*;
+
 public class Main {
 
         public static void main(String[] args) {
 
-                Shape aCircle1 = new Circle("Red", 1, 2);
-                Shape aCircle2 = new Circle("Yellow", 5, 10);
-                Shape aRectangle1 = new Rectangle("Black", 2, 3);
-                Shape aRectangle2 = new Rectangle("White", 11, 9);
+                Animal[] animals = {
+                                        new Dog("Meet", "New York", "BigBoy", "Hasky", true),
+                                        new Dog("Bones", "Moscow", "LittleBoy", "Mops", false),
+                                        new Dog("Tomato's", "Praga", "Woman", "Nope", true),
 
+                                        new Cat("Cat food", "Old York", 15,  "Siam"),
+                                        new Cat("Cucumber", "Warsaw", 20,  "Scotland"),
+                                        new Cat("fish", "Berlin", 10,  "Nope")
+                };
 
+                for(Animal member : animals) {
+                        member.makeNoise();
+                        member.eat();
+                        member.sleep();
+                }
 
-                Shape[] shapes = {aCircle1, aCircle2, aRectangle1, aRectangle2};
+                Veterinarian[] vet_patients = animals;
 
-                for(Shape i : shapes) {
-                        i.draw();
+                for(Veterinarian patient : vet_patients) {
+                        patient.treatAnimal();
                 }
 
         }

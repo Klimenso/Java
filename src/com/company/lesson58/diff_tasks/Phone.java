@@ -1,4 +1,4 @@
-package com.company.lesson58;
+package com.company.lesson58.diff_tasks;
 
 public class Phone {
 
