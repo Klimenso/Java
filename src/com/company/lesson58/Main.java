@@ -1,8 +1,7 @@
 package com.company.lesson58;
 
 import com.company.lesson58.animals.*;
-import com.company.lesson58.diff_tasks.Aspirant;
-import com.company.lesson58.diff_tasks.Student;
+import com.company.lesson58.diff_tasks.*;
 
 public class Main {
 
@@ -30,11 +29,20 @@ public class Main {
                         patient.treatAnimal();
                 }*/
 
+/*
                 Student[] students = { new Aspirant(), new Student(), new Aspirant(), new Student() };
 
                 for(Student member : students) {
                         System.out.println(member.getScholarship());
                 }
+*/
+                Printable[] printables = { new Book(), new Book(), new Magazine(), new Magazine() };
 
+                for(Printable member : printables) {
+                        member.print();
+                }
+
+                Magazine.printMagazines(printables);
+                Book.printBooks(printables);
         }
 }
