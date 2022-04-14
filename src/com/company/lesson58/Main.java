@@ -1,48 +1,55 @@
 package com.company.lesson58;
 
-import com.company.lesson58.animals.*;
-import com.company.lesson58.diff_tasks.*;
+import com.company.lesson58.enums.*;
 
 public class Main {
 
         public static void main(String[] args) {
 
-                /*Animal[] animals = {
-                                        new Dog("Meet", "New York", "BigBoy", "Hasky", true),
-                                        new Dog("Bones", "Moscow", "LittleBoy", "Mops", false),
-                                        new Dog("Tomato's", "Praga", "Woman", "Nope", true),
+                Seasons favoriteSeason = Seasons.SUMMER;
 
-                                        new Cat("Cat food", "Old York", 15,  "Siam"),
-                                        new Cat("Cucumber", "Warsaw", 20,  "Scotland"),
-                                        new Cat("fish", "Berlin", 10,  "Nope")
+                Seasons seasons[] = Seasons.values();
+
+                for(Seasons s : seasons) {
+
+                        System.out.println("Name : " + s.name() + "\nOrdinal : " + s.ordinal()
+                                          + "\nFav : " + iLikeSeason(s)
+                                          + "\nDescription : " + s.getDescription()
+                                          + "\nAverageTemp : " + s.getAverageTemperature() );
+
+                        System.out.println("----------------------------");
+
+                }
+
+                Clothes[] clothes = new Clothes[] {
+
+                        new Tie(ClothingSize.M, 200.0, "WHITE"),
+                        new Tshirt(ClothingSize.L, 250.0, "YELLOW"),
+                        new Pants(ClothingSize.S, 17.0, "RED"),
+                        new Skirt(ClothingSize.XXS, 215.0, "BLACK")
                 };
 
-                for(Animal member : animals) {
-                        member.makeNoise();
-                        member.eat();
-                        member.sleep();
+                System.out.println("============MAN==============");
+                Atelier.dressingMan(clothes);
+                System.out.println("============WOMAN==============");
+                Atelier.dressingWoman(clothes);
+        }
+
+        public static String iLikeSeason(Seasons s) {
+
+                String out;
+
+                switch(s) {
+                        case AUTUMN :
+                        case SPRING :
+                        case SUMMER :
+                        case WINTER :
+                                out = "I like " + s.name();
+                                break;
+                        default:
+                                out = "I don't like anyone";
                 }
 
-                Veterinarian[] vet_patients = animals;
-
-                for(Veterinarian patient : vet_patients) {
-                        patient.treatAnimal();
-                }*/
-
-/*
-                Student[] students = { new Aspirant(), new Student(), new Aspirant(), new Student() };
-
-                for(Student member : students) {
-                        System.out.println(member.getScholarship());
-                }
-*/
-                Printable[] printables = { new Book(), new Book(), new Magazine(), new Magazine() };
-
-                for(Printable member : printables) {
-                        member.print();
-                }
-
-                Magazine.printMagazines(printables);
-                Book.printBooks(printables);
+                return out;
         }
 }
