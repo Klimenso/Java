@@ -13,9 +13,7 @@ public abstract class Animal implements Veterinarian {
                 this.location = location;
         }
 
-        public String getFood() {
-                return food;
-        }
+        public String getFood() { return food; }
 
         public void setFood(String food) {
                 this.food = food;
@@ -34,7 +32,7 @@ public abstract class Animal implements Veterinarian {
 
         public void sleep() { System.out.println("Животное спит"); }
 
-        @Override public void treatAnimal(){ System.out.println("Food of Animal " + food
+        @Override public void treatAnimal() { System.out.println("Food of Animal " + food
                 + "\nLocation of Animal " + location); }
 
 }
