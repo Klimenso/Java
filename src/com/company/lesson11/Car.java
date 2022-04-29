@@ -1,17 +1,28 @@
 package com.company.lesson11;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class Car {
+public class Car implements Serializable {
 
         private String brand;
         private double speed;
         private double price;
 
-        Car() {
+        public Car() {
                 super();
         }
-        Car(String brand, double speed, double price) {
+
+        @Override
+        public String toString() {
+                return "Car{" +
+                        "brand='" + brand + '\'' +
+                        ", speed=" + speed +
+                        ", price=" + price +
+                        '}';
+        }
+
+        public Car(String brand, double speed, double price) {
                 this.brand = brand;
                 this.speed = speed;
                 this.price = price;
